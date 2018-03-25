@@ -1,0 +1,46 @@
+spring:
+  profiles:
+    active: development
+---
+spring:
+  profiles: development
+  data:
+      mongodb:
+        host: 116.56.140.66
+        port: 27017
+  jackson:
+    date-format: "YYYY-MM-dd"
+    serialization:
+      write_dates_as_timestamps: true
+  neo4j:
+    host: ${SPRING_NEO4J_HOST:222.201.187.167}
+    port: ${SPRING_NEO4J_PORT:7474}
+    username: neo4j
+    password: wujiechu
+  redis:
+    host: 116.56.140.66
+    port: 6379
+    password: wujiechu
+  jpa:
+    show_sql: false
+    database: MYSQL
+    generate-ddl: true
+  datasource:
+    url: jdbc:mysql://116.56.140.66:3306/dev
+    username: root
+    password: wujiechu
+    initialize: false
+ribbon:
+  eureka:
+    enabled: false
+user-service:
+  ribbon:
+    listOfServers: http://116.56.140.66:8181
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://116.56.140.66:8181/uaa/user
+    client:
+      client-id: acme
+      access-token-uri: http://116.56.140.66:8787
+  ignored: /catalog/**

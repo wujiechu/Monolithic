@@ -1,0 +1,36 @@
+{
+  "groups": [{
+    "name": "spring.neo4j",
+    "type": "demo.Neo4jProperties",
+    "sourceType": "demo.Neo4jProperties"
+  }],
+  "properties": [
+    {
+      "name": "spring.neo4j.host",
+      "type": "java.lang.String",
+      "sourceType": "demo.Neo4jProperties"
+    },
+    {
+      "name": "spring.neo4j.password",
+      "type": "java.lang.String",
+      "sourceType": "demo.Neo4jProperties"
+    },
+    {
+      "name": "spring.neo4j.port",
+      "type": "java.lang.Integer",
+      "sourceType": "demo.Neo4jProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.neo4j.uri",
+      "type": "java.lang.String",
+      "sourceType": "demo.Neo4jProperties"
+    },
+    {
+      "name": "spring.neo4j.username",
+      "type": "java.lang.String",
+      "sourceType": "demo.Neo4jProperties"
+    }
+  ],
+  "hints": []
+}
